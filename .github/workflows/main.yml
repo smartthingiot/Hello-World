@@ -24,13 +24,13 @@ jobs:
         uses: wlixcc/SFTP-Deploy-Action@v1.2.1
         with:
           username: ubuntu
-          server: 130.168.48.23
+          server: wherever.duckdns.org
           port: 322 # default is 22
           ssh_private_key: ${{ secrets.SSH_KEY_23 }}
 
           
           # will put all file under this path
-          local_path: ./smartthingiot/Hello-World # default is ./*
+          local_path: ./* # default is ./*
           # files will copy to under remote_path
           remote_path: /home/ubuntu/docker/hello-world
           
